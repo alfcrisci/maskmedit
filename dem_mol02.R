@@ -1,6 +1,5 @@
 library(terra)
 
-setwd("C:\\aaa_lavori\\lav_moloch_pasi")
 
 
 dem_ita02=readRDS("dem2km_mol.rds") # anydem
@@ -51,8 +50,4 @@ png("seamask0na.png")
 plot(seamask0na)
 dev.off()
 
-fill=readRDS("fillrkmoloch.rds")
 
-fillrkmoloch02=values(r_ita02)+1
-fillrkmoloch02[1:2]=2
-saveRDS(fillrkmoloch02,"fillrkmoloch02.rds")
